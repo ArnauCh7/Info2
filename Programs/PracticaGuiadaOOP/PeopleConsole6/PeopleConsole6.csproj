@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PeopleLib\PeopleLib.csproj">
-      <Project>{77c5a37c-547b-45d5-854a-7f06cf5ddbad}</Project>
+      <Project>{4d0b53a2-ef91-497f-b968-dc68232b27a9}</Project>
       <Name>PeopleLib</Name>
     </ProjectReference>
   </ItemGroup>

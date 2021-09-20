@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{06575CFD-5998-4373-852F-55D7B643C6E4}</ProjectGuid>
+    <ProjectGuid>{3ECEFFB8-C8DC-4F33-871F-A45C775AC669}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PeopleConsole3</RootNamespace>
-    <AssemblyName>PeopleConsole3</AssemblyName>
+    <RootNamespace>PeopleConsole7</RootNamespace>
+    <AssemblyName>PeopleConsole7</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

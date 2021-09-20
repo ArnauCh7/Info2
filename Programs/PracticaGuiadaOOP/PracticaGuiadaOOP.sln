@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleLib", "PeopleLib\PeopleLib.csproj", "{77C5A37C-547B-45D5-854A-7F06CF5DDBAD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleConsole", "PeopleConsole\PeopleConsole.csproj", "{326CD561-D9A9-4733-B56E-705F3D84829E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleConsole2", "PeopleConsole2\PeopleConsole2.csproj", "{55B34A75-7D1A-4A49-856D-C0DCD3C9107D}"
@@ -17,16 +15,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleConsole5", "PeopleCon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleConsole6", "PeopleConsole6\PeopleConsole6.csproj", "{71A0AFE5-1DA6-4033-B732-E4CD641A9FE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleLib", "PeopleLib\PeopleLib.csproj", "{4D0B53A2-EF91-497F-B968-DC68232B27A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleConsole7", "PeopleConsole7\PeopleConsole7.csproj", "{3ECEFFB8-C8DC-4F33-871F-A45C775AC669}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{77C5A37C-547B-45D5-854A-7F06CF5DDBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77C5A37C-547B-45D5-854A-7F06CF5DDBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77C5A37C-547B-45D5-854A-7F06CF5DDBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77C5A37C-547B-45D5-854A-7F06CF5DDBAD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{326CD561-D9A9-4733-B56E-705F3D84829E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{326CD561-D9A9-4733-B56E-705F3D84829E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{326CD561-D9A9-4733-B56E-705F3D84829E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +49,14 @@ Global
 		{71A0AFE5-1DA6-4033-B732-E4CD641A9FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71A0AFE5-1DA6-4033-B732-E4CD641A9FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71A0AFE5-1DA6-4033-B732-E4CD641A9FE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0B53A2-EF91-497F-B968-DC68232B27A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0B53A2-EF91-497F-B968-DC68232B27A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0B53A2-EF91-497F-B968-DC68232B27A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0B53A2-EF91-497F-B968-DC68232B27A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECEFFB8-C8DC-4F33-871F-A45C775AC669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECEFFB8-C8DC-4F33-871F-A45C775AC669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECEFFB8-C8DC-4F33-871F-A45C775AC669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECEFFB8-C8DC-4F33-871F-A45C775AC669}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

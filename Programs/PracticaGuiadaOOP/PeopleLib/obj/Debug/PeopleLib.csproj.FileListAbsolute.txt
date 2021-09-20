@@ -1,0 +1,5 @@
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\bin\Debug\PeopleLib.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\bin\Debug\PeopleLib.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\obj\Debug\PeopleLib.csproj.CoreCompileInputs.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\obj\Debug\PeopleLib.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\obj\Debug\PeopleLib.pdb

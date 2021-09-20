@@ -16,6 +16,7 @@ namespace PeopleConsole6
 
             p1 = p2.GetCopy();
             Console.WriteLine(p1.GetName() + " is " + p1.GetAge());
+            Console.ReadKey();
         }
     }
 }
