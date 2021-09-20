@@ -3,3 +3,4 @@ C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\b
 C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\obj\Debug\PeopleLib.csproj.CoreCompileInputs.cache
 C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\obj\Debug\PeopleLib.dll
 C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\obj\Debug\PeopleLib.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleLib\obj\Debug\PeopleLib.csproj.AssemblyReference.cache

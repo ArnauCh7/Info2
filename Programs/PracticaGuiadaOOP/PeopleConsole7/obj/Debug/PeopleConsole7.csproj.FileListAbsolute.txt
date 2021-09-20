@@ -1,0 +1,10 @@
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\bin\Debug\PeopleConsole7.exe.config
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\bin\Debug\PeopleConsole7.exe
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\bin\Debug\PeopleConsole7.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\bin\Debug\PeopleLib.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\bin\Debug\PeopleLib.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\obj\Debug\PeopleConsole7.csproj.AssemblyReference.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\obj\Debug\PeopleConsole7.csproj.CoreCompileInputs.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\obj\Debug\PeopleConsole7.csproj.CopyComplete
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\obj\Debug\PeopleConsole7.exe
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\PracticaGuiadaOOP\PeopleConsole7\obj\Debug\PeopleConsole7.pdb
