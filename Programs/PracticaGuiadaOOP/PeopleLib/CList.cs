@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+
 namespace PeopleLib
 {
     public class CList
@@ -67,6 +69,45 @@ namespace PeopleLib
                     }
                 }
                 return youngest;
+            }
+        }
+        public int LoadFromFile(string filename)
+        {
+            StreamReader r = null;
+            try
+            {
+                r = new StreamReader(filename);
+                number = 0;
+                string line = r.ReadLine();
+                while (line != null && number < MAXP)
+                {
+                    string[] words = line.Split(':');
+                    if (words.Length != 3)
+                    {
+                        r.Close();
+                        return -2;
+                    }
+                    string name = words[2];
+                    int age = Convert.ToInt32(words[0]);
+                    float height = float.Parse(words[1]);
+                    CPerson p = new CPerson(age, height, name);
+                    people[number] = p;
+                    number++;
+                    line = r.ReadLine();
+
+                }
+                return 0;
+
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("File Not Found");
+                return -1;
+            }
+            catch (FormatException)
+            {
+                r.Close();
+                return -2;
             }
         }
 

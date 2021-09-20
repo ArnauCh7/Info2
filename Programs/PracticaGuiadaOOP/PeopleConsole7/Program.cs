@@ -68,7 +68,6 @@ namespace PeopleConsole7
             {
                 Console.WriteLine("There is nobody in the list");
             }
-
             Console.ReadKey();
         }
     }
