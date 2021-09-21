@@ -11,64 +11,48 @@ namespace SimulatorConsole
     {
         static void Main(string[] args)
         {
-            
+            FlightPlanList lista = new FlightPlanList();
             try
             {
-                Console.WriteLine("Escribe el identificador");
-                //   string nombre = Console.ReadLine();
-                string identificador = Console.ReadLine();
+                int count = 0;
+                while (count < 2)
+                {
+                    Console.WriteLine("Escribe el identificador");
+                    //   string nombre = Console.ReadLine();
+                    string identificador = Console.ReadLine();
 
-                Console.WriteLine("Escribe la velocidad");
-                double velocidad = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Escribe la velocidad");
+                    double velocidad = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Escribe las coordenadas de la posición inicial, separadas por un blanco");
-                string linea = Console.ReadLine();
-                string[] trozos = linea.Split(' ');
-                double ix = Convert.ToDouble(trozos[0]);
-                double iy = Convert.ToDouble(trozos[1]);
+                    Console.WriteLine("Escribe las coordenadas de la posición inicial, separadas por un blanco");
+                    string linea = Console.ReadLine();
+                    string[] trozos = linea.Split(' ');
+                    double ix = Convert.ToDouble(trozos[0]);
+                    double iy = Convert.ToDouble(trozos[1]);
 
-                Console.WriteLine("Escribe las coordenadas de la posición final, separadas por un blanco");
-                linea = Console.ReadLine();
-                trozos = linea.Split(' ');
-                double fx = Convert.ToDouble(trozos[0]);
-                double fy = Convert.ToDouble(trozos[1]);
+                    Console.WriteLine("Escribe las coordenadas de la posición final, separadas por un blanco");
+                    linea = Console.ReadLine();
+                    trozos = linea.Split(' ');
+                    double fx = Convert.ToDouble(trozos[0]);
+                    double fy = Convert.ToDouble(trozos[1]);
 
-                FlightPlan plan_a = new FlightPlan(identificador, ix, iy, fx, fy, velocidad);
+                    FlightPlan plan = new FlightPlan(identificador, ix, iy, fx, fy, velocidad);
+                    lista.AddFlightPlan(plan);
 
-                Console.WriteLine("Escribe el identificador");
-                //   string nombre = Console.ReadLine();
-                identificador = Console.ReadLine();
+                    count++;
 
-                Console.WriteLine("Escribe la velocidad");
-                velocidad = Convert.ToDouble(Console.ReadLine());
+                }
 
-                Console.WriteLine("Escribe las coordenadas de la posición inicial, separadas por un blanco");
-                linea = Console.ReadLine();
-                trozos = linea.Split(' ');
-                ix = Convert.ToDouble(trozos[0]);
-                iy = Convert.ToDouble(trozos[1]);
-
-                Console.WriteLine("Escribe las coordenadas de la posición final, separadas por un blanco");
-                linea = Console.ReadLine();
-                trozos = linea.Split(' ');
-                fx = Convert.ToDouble(trozos[0]);
-                fy = Convert.ToDouble(trozos[1]);
-
-                FlightPlan plan_b = new FlightPlan(identificador, ix, iy, fx, fy, velocidad);
                 int ciclos = 10;
                 int intervaloTiempo = 10;
                 double distanciaSeguridad = 10;
-
+                
                 int i = 0;
                 while(i < ciclos)
                 {
-                    plan_a.EscribeConsola();
-                    plan_a.Mover(intervaloTiempo);
-                    plan_a.EscribeConsola();
-                    plan_b.EscribeConsola();
-                    plan_b.Mover(intervaloTiempo);
-                    plan_b.EscribeConsola();
-                    if (plan_a.Conflicto(plan_b, distanciaSeguridad))
+                    lista.Mover(intervaloTiempo);
+                    lista.EscribeConsola();
+                    if (lista.GetFlightPlan(0).Conflicto(lista.GetFlightPlan(1), distanciaSeguridad))
                         Console.WriteLine("CONFLICTO!!");
                     i++;
                 }

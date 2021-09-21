@@ -25,3 +25,12 @@ C:\Users\arnau\Documents\UNIVERSITAT\2A\INFO2\PrimerProyectoBefore\FlightLib\obj
 C:\Users\arnau\Documents\UNIVERSITAT\2A\INFO2\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.CoreCompileInputs.cache
 C:\Users\arnau\Documents\UNIVERSITAT\2A\INFO2\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.dll
 C:\Users\arnau\Documents\UNIVERSITAT\2A\INFO2\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.deps.json
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.AssemblyReference.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfoInputs.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfo.cs
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.CoreCompileInputs.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.pdb
