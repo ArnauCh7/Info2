@@ -1,0 +1,6 @@
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\Windows forms\Clases\bin\Debug\Clases.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\Windows forms\Clases\bin\Debug\Clases.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\Windows forms\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\Windows forms\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\Windows forms\Clases\obj\Debug\Clases.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Programs\Windows forms\Clases\obj\Debug\Clases.pdb

@@ -7,34 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clases;
 
 namespace Formularios
 {
     public partial class Principal : Form
     {
+        PList milista = new PList();
+        PictureBox[] misPics = new PictureBox[100];
+        int numPics = 0;
         public Principal()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,13 +26,40 @@ namespace Formularios
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
+            positiontracker.BackColor = Color.White;
+            positiontracker.Text = "X = " + e.X + "    Y = " + e.Y;
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            positiontracker.BackColor = Color.Red;
+            positiontracker.Text = "Estas fuera de la zona de reconocimiento";
+        }
+
+        private void newPointToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewPoint form = new NewPoint();
+            form.ShowDialog();
+            Punto p = form.GetPoint();
+            milista.AddPunto(p);
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(5, 5);
+            pic.BackColor = Color.Red;
+            pic.Location = new Point(p.GetX(), p.GetY());
+            panel.Controls.Add(pic);
+            misPics[numPics] = pic;
+            numPics++;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            milista.MoveAll(2, 1);
+            for(int i = 0; i<milista.GetNum(); i++)
+            {
+                misPics[i].Location = new Point(milista.GetPunto(i).GetX(), milista.GetPunto(i).GetY());
+            }
 
         }
     }

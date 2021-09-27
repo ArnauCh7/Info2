@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    class PList
+    public class PList
     {
         const int Max = 100;
         Punto[] lista;
@@ -21,7 +21,7 @@ namespace Clases
         {
             try
             {
-                if (num != 100)
+                if (num != Max)
                 {
                     lista[this.num] = p;
                     this.num++;
@@ -54,6 +54,10 @@ namespace Clases
             {
                 lista[i].Move(incX, incY);
             }
+        }
+        public int GetNum()
+        {
+            return this.num;
         }
     }
 }

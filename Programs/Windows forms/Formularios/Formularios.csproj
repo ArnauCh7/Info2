@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorFormato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorFormato.Designer.cs">
+      <DependentUpon>ErrorFormato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPoint.Designer.cs">
+      <DependentUpon>NewPoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ErrorFormato.resx">
+      <DependentUpon>ErrorFormato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPoint.resx">
+      <DependentUpon>NewPoint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clases\Clases.csproj">
+      <Project>{0f4b80b7-c191-4c67-9fbb-b3e83b69ee57}</Project>
+      <Name>Clases</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
