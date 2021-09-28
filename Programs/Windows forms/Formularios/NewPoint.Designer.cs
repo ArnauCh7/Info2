@@ -34,13 +34,15 @@ namespace Formularios
             this.Xbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(83, 162);
+            this.button1.Location = new System.Drawing.Point(111, 199);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 31);
+            this.button1.Size = new System.Drawing.Size(117, 38);
             this.button1.TabIndex = 0;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,25 +50,28 @@ namespace Formularios
             // 
             // Ybox
             // 
-            this.Ybox.Location = new System.Drawing.Point(147, 107);
+            this.Ybox.Location = new System.Drawing.Point(196, 132);
+            this.Ybox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Ybox.Name = "Ybox";
-            this.Ybox.Size = new System.Drawing.Size(107, 20);
+            this.Ybox.Size = new System.Drawing.Size(141, 22);
             this.Ybox.TabIndex = 2;
             // 
             // Xbox
             // 
-            this.Xbox.Location = new System.Drawing.Point(12, 107);
+            this.Xbox.Location = new System.Drawing.Point(16, 132);
+            this.Xbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Xbox.Name = "Xbox";
-            this.Xbox.Size = new System.Drawing.Size(107, 20);
+            this.Xbox.Size = new System.Drawing.Size(141, 22);
             this.Xbox.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 50);
+            this.label1.Location = new System.Drawing.Point(65, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 24);
+            this.label1.Size = new System.Drawing.Size(30, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "X";
             // 
@@ -74,22 +79,35 @@ namespace Formularios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(185, 50);
+            this.label2.Location = new System.Drawing.Point(247, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 24);
+            this.label2.Size = new System.Drawing.Size(29, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Y";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(274, 246);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // NewPoint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 219);
+            this.ClientSize = new System.Drawing.Size(352, 270);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Xbox);
             this.Controls.Add(this.Ybox);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NewPoint";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -104,5 +122,6 @@ namespace Formularios
         private System.Windows.Forms.TextBox Xbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -38,17 +38,19 @@ namespace Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 16);
+            this.label1.Location = new System.Drawing.Point(105, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 24);
+            this.label1.Size = new System.Drawing.Size(213, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "FORMAT ERROR!";
             // 
             // ok
             // 
-            this.ok.Location = new System.Drawing.Point(92, 43);
+            this.ok.Location = new System.Drawing.Point(123, 53);
+            this.ok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ok.Name = "ok";
-            this.ok.Size = new System.Drawing.Size(66, 23);
+            this.ok.Size = new System.Drawing.Size(88, 28);
             this.ok.TabIndex = 1;
             this.ok.Text = "OK";
             this.ok.UseVisualStyleBackColor = true;
@@ -61,20 +63,22 @@ namespace Formularios
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(40, 9);
+            this.label2.Location = new System.Drawing.Point(53, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 33);
+            this.label2.Size = new System.Drawing.Size(43, 41);
             this.label2.TabIndex = 2;
             this.label2.Text = "X";
             // 
             // ErrorFormato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(254, 74);
+            this.ClientSize = new System.Drawing.Size(339, 91);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ErrorFormato";
             this.Text = "Form1";
             this.ResumeLayout(false);

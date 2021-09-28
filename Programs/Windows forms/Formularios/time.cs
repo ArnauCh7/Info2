@@ -11,10 +11,10 @@ using Clases;
 
 namespace Formularios
 {
-    public partial class NewPoint : Form
+    public partial class time : Form
     {
-        Punto p;
-        public NewPoint()
+        int tiempo;
+        public time()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace Formularios
         {
             try
             {
-                p = new Punto(Convert.ToInt32(Xbox.Text), Convert.ToInt32(Ybox.Text));
+                tiempo = Convert.ToInt32(timeInterval.Text);
                 Close();
             }
             catch (FormatException)
@@ -33,14 +33,9 @@ namespace Formularios
             }
         }
 
-        public Punto GetPoint()
+        public int GetTime()
         {
-            return this.p;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
+            return tiempo;
         }
     }
 }

@@ -52,6 +52,18 @@
     <Compile Include="ErrorFormato.Designer.cs">
       <DependentUpon>ErrorFormato.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarPuntos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarPuntos.Designer.cs">
+      <DependentUpon>MostrarPuntos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="time.Designer.cs">
+      <DependentUpon>time.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewPoint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ErrorFormato.resx">
       <DependentUpon>ErrorFormato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarPuntos.resx">
+      <DependentUpon>MostrarPuntos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="time.resx">
+      <DependentUpon>time.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewPoint.resx">
       <DependentUpon>NewPoint.cs</DependentUpon>

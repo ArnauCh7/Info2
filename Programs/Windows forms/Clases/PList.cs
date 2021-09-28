@@ -59,5 +59,13 @@ namespace Clases
         {
             return this.num;
         }
+        public void RemoveAll()
+        {
+            while(num > 0)
+            {
+                lista[num] = null;
+                num--;
+            }
+        }
     }
 }

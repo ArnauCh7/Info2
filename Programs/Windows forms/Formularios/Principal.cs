@@ -23,7 +23,10 @@ namespace Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            time t = new time();
+            t.ShowDialog();
+            reloj.Interval = Convert.ToInt32(t.GetTime());
+            reloj.Start();
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -40,6 +43,35 @@ namespace Formularios
 
         private void newPointToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            milista.MoveAll(2, 1);
+            for(int i = 0; i<milista.GetNum(); i++)
+            {
+                misPics[i].Location = new Point(milista.GetPunto(i).GetX(), milista.GetPunto(i).GetY());
+            }
+
+        }
+
+        private void reloj_Tick(object sender, EventArgs e)
+        {
+            milista.MoveAll(2, 1);
+            for (int i = 0; i < milista.GetNum(); i++)
+            {
+                misPics[i].Location = new Point(milista.GetPunto(i).GetX(), milista.GetPunto(i).GetY());
+            }
+        }
+
+        private void stop_Click(object sender, EventArgs e)
+        {
+            reloj.Stop();
+        }
+
+        private void nuevoPuntoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             NewPoint form = new NewPoint();
             form.ShowDialog();
             Punto p = form.GetPoint();
@@ -53,14 +85,20 @@ namespace Formularios
             numPics++;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void listarPuntosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            milista.MoveAll(2, 1);
-            for(int i = 0; i<milista.GetNum(); i++)
-            {
-                misPics[i].Location = new Point(milista.GetPunto(i).GetX(), milista.GetPunto(i).GetY());
-            }
+            MostrarPuntos m = new MostrarPuntos();
+            m.GiveList(milista);
+            m.ShowDialog();
+        }
 
+        private void reset_Click(object sender, EventArgs e)
+        {
+            milista.RemoveAll();
+            for(int i = 0; i<numPics; i++)
+            {
+                panel.Controls.Remove(misPics[i]);
+            }
         }
     }
 }
