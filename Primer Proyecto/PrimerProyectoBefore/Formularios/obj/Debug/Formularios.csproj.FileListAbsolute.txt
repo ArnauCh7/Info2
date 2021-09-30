@@ -2,9 +2,14 @@ C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\F
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\bin\Debug\Formularios.exe
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\bin\Debug\Formularios.pdb
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.csproj.AssemblyReference.cache
-C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.Form1.resources
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.Properties.Resources.resources
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.csproj.GenerateResource.cache
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.csproj.CoreCompileInputs.cache
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.exe
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\bin\Debug\FlightLib.dll
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\bin\Debug\FlightLib.pdb
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.ErrorFormato.resources
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.NewAircraft.resources
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.Principal.resources
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.csproj.CopyComplete

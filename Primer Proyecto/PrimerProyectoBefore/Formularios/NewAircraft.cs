@@ -19,34 +19,22 @@ namespace Formularios
             InitializeComponent();
         }
 
-        private void id_TextChanged(object sender, EventArgs e)
+        private void confirm_Click(object sender, EventArgs e)
         {
-            string name = id.Text;
+            try
+            {
+                p = new FlightPlan(id.Text, Convert.ToDouble(currentX.Text), Convert.ToDouble(currentY.Text), Convert.ToDouble(finalX.Text), Convert.ToDouble(finalY.Text), Convert.ToDouble(velocity.Text));
+                Close();
+            }
+            catch(FormatException)
+            {
+                ErrorFormato error = new ErrorFormato();
+                error.ShowDialog();
+            }
         }
-
-        private void currentX_TextChanged(object sender, EventArgs e)
+        public FlightPlan GetFlight()
         {
-            double cX = Convert.ToDouble(currentX.Text);
-        }
-
-        private void currentY_TextChanged(object sender, EventArgs e)
-        {
-            double cY = Convert.ToDouble(currentY.Text);
-        }
-
-        private void finalX_TextChanged(object sender, EventArgs e)
-        {
-            double fX = Convert.ToDouble(finalX.Text);
-        }
-
-        private void finalY_TextChanged(object sender, EventArgs e)
-        {
-            double fY = Convert.ToDouble(finalY.Text);
-        }
-
-        private void velocity_TextChanged(object sender, EventArgs e)
-        {
-            double speed = Convert.ToDouble(velocity.Text);
+            return this.p;
         }
     }
 }

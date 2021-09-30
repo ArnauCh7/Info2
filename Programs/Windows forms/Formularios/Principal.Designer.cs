@@ -35,15 +35,15 @@ namespace Formularios
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.move = new System.Windows.Forms.Button();
             this.auto = new System.Windows.Forms.Button();
             this.positiontracker = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stop = new System.Windows.Forms.Button();
-            this.reloj = new System.Windows.Forms.Timer(this.components);
             this.nuevoPuntoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarPuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stop = new System.Windows.Forms.Button();
+            this.reloj = new System.Windows.Forms.Timer(this.components);
             this.reset = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -95,16 +95,16 @@ namespace Formularios
             this.label4.TabIndex = 3;
             this.label4.Text = "400";
             // 
-            // button1
+            // move
             // 
-            this.button1.Location = new System.Drawing.Point(61, 164);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "MOVE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.move.Location = new System.Drawing.Point(61, 164);
+            this.move.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.move.Name = "move";
+            this.move.Size = new System.Drawing.Size(80, 30);
+            this.move.TabIndex = 4;
+            this.move.Text = "MOVE";
+            this.move.UseVisualStyleBackColor = true;
+            this.move.Click += new System.EventHandler(this.button1_Click);
             // 
             // auto
             // 
@@ -145,6 +145,20 @@ namespace Formularios
             this.newPointToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.newPointToolStripMenuItem.Text = "Opciones";
             // 
+            // nuevoPuntoToolStripMenuItem
+            // 
+            this.nuevoPuntoToolStripMenuItem.Name = "nuevoPuntoToolStripMenuItem";
+            this.nuevoPuntoToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.nuevoPuntoToolStripMenuItem.Text = "Nuevo Punto";
+            this.nuevoPuntoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPuntoToolStripMenuItem_Click);
+            // 
+            // listarPuntosToolStripMenuItem
+            // 
+            this.listarPuntosToolStripMenuItem.Name = "listarPuntosToolStripMenuItem";
+            this.listarPuntosToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.listarPuntosToolStripMenuItem.Text = "Listar Puntos";
+            this.listarPuntosToolStripMenuItem.Click += new System.EventHandler(this.listarPuntosToolStripMenuItem_Click);
+            // 
             // stop
             // 
             this.stop.Location = new System.Drawing.Point(61, 278);
@@ -158,20 +172,6 @@ namespace Formularios
             // reloj
             // 
             this.reloj.Tick += new System.EventHandler(this.reloj_Tick);
-            // 
-            // nuevoPuntoToolStripMenuItem
-            // 
-            this.nuevoPuntoToolStripMenuItem.Name = "nuevoPuntoToolStripMenuItem";
-            this.nuevoPuntoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.nuevoPuntoToolStripMenuItem.Text = "Nuevo Punto";
-            this.nuevoPuntoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPuntoToolStripMenuItem_Click);
-            // 
-            // listarPuntosToolStripMenuItem
-            // 
-            this.listarPuntosToolStripMenuItem.Name = "listarPuntosToolStripMenuItem";
-            this.listarPuntosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.listarPuntosToolStripMenuItem.Text = "Listar Puntos";
-            this.listarPuntosToolStripMenuItem.Click += new System.EventHandler(this.listarPuntosToolStripMenuItem_Click);
             // 
             // reset
             // 
@@ -192,7 +192,7 @@ namespace Formularios
             this.Controls.Add(this.stop);
             this.Controls.Add(this.positiontracker);
             this.Controls.Add(this.auto);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.move);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -217,7 +217,7 @@ namespace Formularios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button move;
         private System.Windows.Forms.Button auto;
         private System.Windows.Forms.Label positiontracker;
         private System.Windows.Forms.MenuStrip menuStrip1;

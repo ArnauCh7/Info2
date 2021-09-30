@@ -67,20 +67,9 @@ namespace FlightLib
 
             return conflicto;
         }
-
-        public void EscribeConsola()
-        // escribe en consola los datos del plan de vuelo
+        public Position GetCurrentPosition()
         {
-            Console.WriteLine("******************************");
-            Console.WriteLine("Datos del vuelo: ");
-            Console.WriteLine("Identificador: {0}", id);
-            Console.WriteLine("Velocidad: {0:F2}", velocidad);
-            Console.WriteLine("Posición actual: ({0:F2},{1:F2})", currentPosition.GetX(), currentPosition.GetY());
-            if (this.Destino())
-            {
-                Console.WriteLine("Ha llegado al destino");
-            }
-            Console.WriteLine("******************************");
+            return currentPosition;
         }
     }
 }

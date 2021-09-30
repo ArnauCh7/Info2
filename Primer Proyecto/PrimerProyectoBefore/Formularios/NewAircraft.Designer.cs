@@ -41,6 +41,7 @@ namespace Formularios
             this.currentY = new System.Windows.Forms.TextBox();
             this.velocity = new System.Windows.Forms.TextBox();
             this.finalY = new System.Windows.Forms.TextBox();
+            this.confirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -103,7 +104,6 @@ namespace Formularios
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(100, 22);
             this.id.TabIndex = 6;
-            this.id.TextChanged += new System.EventHandler(this.id_TextChanged);
             // 
             // currentX
             // 
@@ -111,7 +111,6 @@ namespace Formularios
             this.currentX.Name = "currentX";
             this.currentX.Size = new System.Drawing.Size(100, 22);
             this.currentX.TabIndex = 7;
-            this.currentX.TextChanged += new System.EventHandler(this.currentX_TextChanged);
             // 
             // finalX
             // 
@@ -119,7 +118,6 @@ namespace Formularios
             this.finalX.Name = "finalX";
             this.finalX.Size = new System.Drawing.Size(100, 22);
             this.finalX.TabIndex = 8;
-            this.finalX.TextChanged += new System.EventHandler(this.finalX_TextChanged);
             // 
             // currentY
             // 
@@ -127,7 +125,6 @@ namespace Formularios
             this.currentY.Name = "currentY";
             this.currentY.Size = new System.Drawing.Size(100, 22);
             this.currentY.TabIndex = 9;
-            this.currentY.TextChanged += new System.EventHandler(this.currentY_TextChanged);
             // 
             // velocity
             // 
@@ -135,7 +132,6 @@ namespace Formularios
             this.velocity.Name = "velocity";
             this.velocity.Size = new System.Drawing.Size(100, 22);
             this.velocity.TabIndex = 10;
-            this.velocity.TextChanged += new System.EventHandler(this.velocity_TextChanged);
             // 
             // finalY
             // 
@@ -143,13 +139,23 @@ namespace Formularios
             this.finalY.Name = "finalY";
             this.finalY.Size = new System.Drawing.Size(100, 22);
             this.finalY.TabIndex = 11;
-            this.finalY.TextChanged += new System.EventHandler(this.finalY_TextChanged);
+            // 
+            // confirm
+            // 
+            this.confirm.Location = new System.Drawing.Point(149, 386);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(75, 23);
+            this.confirm.TabIndex = 12;
+            this.confirm.Text = "Confirm";
+            this.confirm.UseVisualStyleBackColor = true;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
             // NewAircraft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 421);
+            this.Controls.Add(this.confirm);
             this.Controls.Add(this.finalY);
             this.Controls.Add(this.velocity);
             this.Controls.Add(this.currentY);
@@ -183,5 +189,6 @@ namespace Formularios
         private System.Windows.Forms.TextBox currentY;
         private System.Windows.Forms.TextBox velocity;
         private System.Windows.Forms.TextBox finalY;
+        private System.Windows.Forms.Button confirm;
     }
 }

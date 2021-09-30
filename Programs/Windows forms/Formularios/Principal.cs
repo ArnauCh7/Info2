@@ -41,10 +41,6 @@ namespace Formularios
             positiontracker.Text = "Estas fuera de la zona de reconocimiento";
         }
 
-        private void newPointToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
