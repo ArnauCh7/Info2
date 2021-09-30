@@ -13,7 +13,7 @@ namespace Formularios
 {
     public partial class MostrarPuntos : Form
     {
-        PList lista = new PList();
+        PList lista;
         public MostrarPuntos()
         {
             InitializeComponent();
@@ -27,12 +27,16 @@ namespace Formularios
         {
             Close();
         }
+        public PList GetList()
+        {
+            return this.lista;
+        }
 
-        private void puntosView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void MostrarPuntos_Load(object sender, EventArgs e)
         {
             puntosView.RowCount = lista.GetNum();
             puntosView.ColumnCount = 2;
-            for (int i = 0; i<lista.GetNum(); i++)
+            for (int i = 0; i < lista.GetNum(); i++)
             {
                 puntosView.Rows[i].Cells[0].Value = lista.GetPunto(i).GetX();
                 puntosView.Rows[i].Cells[1].Value = lista.GetPunto(i).GetY();

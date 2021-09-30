@@ -52,6 +52,12 @@
     <Compile Include="ErrorFormato.Designer.cs">
       <DependentUpon>ErrorFormato.cs</DependentUpon>
     </Compile>
+    <Compile Include="FlightGrind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightGrind.Designer.cs">
+      <DependentUpon>FlightGrind.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewAircraft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ErrorFormato.resx">
       <DependentUpon>ErrorFormato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightGrind.resx">
+      <DependentUpon>FlightGrind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAircraft.resx">
       <DependentUpon>NewAircraft.cs</DependentUpon>

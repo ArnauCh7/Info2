@@ -69,7 +69,15 @@ namespace FlightLib
         }
         public Position GetCurrentPosition()
         {
-            return currentPosition;
+            return this.currentPosition;
+        }
+        public string GetID()
+        {
+            return this.id;
+        }
+        public double GetVelocity()
+        {
+            return this.velocidad;
         }
     }
 }

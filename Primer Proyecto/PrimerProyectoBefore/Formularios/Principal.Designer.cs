@@ -104,7 +104,7 @@ namespace Formularios
             this.label1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1141, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 16);
+            this.label1.Size = new System.Drawing.Size(25, 14);
             this.label1.TabIndex = 5;
             this.label1.Text = "800";
             // 
@@ -114,7 +114,7 @@ namespace Formularios
             this.label2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(349, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 16);
+            this.label2.Size = new System.Drawing.Size(13, 14);
             this.label2.TabIndex = 6;
             this.label2.Text = "0";
             // 
@@ -124,7 +124,7 @@ namespace Formularios
             this.label3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(335, 584);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.Size = new System.Drawing.Size(25, 14);
             this.label3.TabIndex = 7;
             this.label3.Text = "550";
             // 
@@ -134,7 +134,7 @@ namespace Formularios
             this.label4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(367, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 16);
+            this.label4.Size = new System.Drawing.Size(13, 14);
             this.label4.TabIndex = 8;
             this.label4.Text = "0";
             // 
@@ -145,7 +145,7 @@ namespace Formularios
             this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1182, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1182, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -155,25 +155,26 @@ namespace Formularios
             this.newAircraftToolStripMenuItem,
             this.aircraftListToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
             // newAircraftToolStripMenuItem
             // 
             this.newAircraftToolStripMenuItem.Name = "newAircraftToolStripMenuItem";
-            this.newAircraftToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newAircraftToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newAircraftToolStripMenuItem.Text = "New Aircraft";
             this.newAircraftToolStripMenuItem.Click += new System.EventHandler(this.newAircraftToolStripMenuItem_Click);
             // 
             // aircraftListToolStripMenuItem
             // 
             this.aircraftListToolStripMenuItem.Name = "aircraftListToolStripMenuItem";
-            this.aircraftListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aircraftListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aircraftListToolStripMenuItem.Text = "Aircraft List";
+            this.aircraftListToolStripMenuItem.Click += new System.EventHandler(this.aircraftListToolStripMenuItem_Click);
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 11F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 612);
             this.Controls.Add(this.label4);

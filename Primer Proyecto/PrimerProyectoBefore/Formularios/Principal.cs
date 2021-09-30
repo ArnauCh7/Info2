@@ -30,10 +30,16 @@ namespace Formularios
             PictureBox pic = new PictureBox();
             pic.Size = new Size(5, 5);
             pic.BackColor = Color.Red;
-            pic.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX()), Convert.ToInt32(p.GetCurrentPosition().GetY()));
-            panel.Controls.Add(pic);
-            misPics[numPics] = pic;
-            numPics++;
+            if(p == null)
+            {
+            }
+            else
+            {
+                pic.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX()), Convert.ToInt32(p.GetCurrentPosition().GetY()));
+                panel.Controls.Add(pic);
+                misPics[numPics] = pic;
+                numPics++;
+            }
         }
 
         private void mover_Click(object sender, EventArgs e)
@@ -54,6 +60,13 @@ namespace Formularios
         private void reset_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void aircraftListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FlightGrind grind = new FlightGrind();
+            grind.GiveList(milista);
+            grind.ShowDialog();
         }
     }
 }

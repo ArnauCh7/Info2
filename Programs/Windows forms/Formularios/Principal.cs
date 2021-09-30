@@ -68,22 +68,30 @@ namespace Formularios
 
         private void nuevoPuntoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewPoint form = new NewPoint();
-            form.ShowDialog();
-            Punto p = form.GetPoint();
-            milista.AddPunto(p);
-            PictureBox pic = new PictureBox();
-            pic.Size = new Size(5, 5);
-            pic.BackColor = Color.Red;
-            pic.Location = new Point(p.GetX(), p.GetY());
-            panel.Controls.Add(pic);
-            misPics[numPics] = pic;
-            numPics++;
+                NewPoint form = new NewPoint();
+                form.ShowDialog();
+                Punto p = form.GetPoint();
+                milista.AddPunto(p);
+                PictureBox pic = new PictureBox();
+                pic.Size = new Size(5, 5);
+                pic.BackColor = Color.Red;
+            if (p == null)
+            {
+                
+            }
+            else
+            {
+                pic.Location = new Point(p.GetX(), p.GetY());
+                panel.Controls.Add(pic);
+                misPics[numPics] = pic;
+                numPics++;
+            }
         }
 
         private void listarPuntosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MostrarPuntos m = new MostrarPuntos();
+            Console.WriteLine(milista.GetPunto(0));
             m.GiveList(milista);
             m.ShowDialog();
         }

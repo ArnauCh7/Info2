@@ -30,7 +30,6 @@ namespace Formularios
         private void InitializeComponent()
         {
             this.puntosView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.puntosView)).BeginInit();
             this.SuspendLayout();
@@ -44,16 +43,6 @@ namespace Formularios
             this.puntosView.RowTemplate.Height = 24;
             this.puntosView.Size = new System.Drawing.Size(240, 150);
             this.puntosView.TabIndex = 0;
-            this.puntosView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.puntosView_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // button1
             // 
@@ -71,20 +60,18 @@ namespace Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 285);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.puntosView);
             this.Name = "MostrarPuntos";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MostrarPuntos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.puntosView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView puntosView;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
     }
 }

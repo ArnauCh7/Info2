@@ -38,17 +38,17 @@ namespace Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 20);
+            this.label1.Location = new System.Drawing.Point(118, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 29);
+            this.label1.Size = new System.Drawing.Size(105, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "FORMAT ERROR!";
+            this.label1.Text = "ERROR!";
             // 
             // ok
             // 
             this.ok.Location = new System.Drawing.Point(123, 53);
-            this.ok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ok.Margin = new System.Windows.Forms.Padding(4);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(88, 28);
             this.ok.TabIndex = 1;
@@ -78,7 +78,7 @@ namespace Formularios
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ErrorFormato";
             this.Text = "Form1";
             this.ResumeLayout(false);
