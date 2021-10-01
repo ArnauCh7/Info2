@@ -6,7 +6,7 @@ namespace FlightLib
 {
     public class FlightPlanList
     {
-        FlightPlan[] vector = new FlightPlan[10];
+        FlightPlan[] vector = new FlightPlan[2];
         int number = 0;
 
         public int AddFlightPlan(FlightPlan p)
@@ -49,7 +49,14 @@ namespace FlightLib
             int i = 0;
             while (i < number)
             {
-                vector[i].Mover(tiempo);
+                if(vector[i].Destino() == true)
+                {
+                    Console.WriteLine(vector[i].GetID() + " arrived to dstination!");
+                }
+                else
+                {
+                    vector[i].Mover(tiempo);
+                }
                 i++;
             }
         }

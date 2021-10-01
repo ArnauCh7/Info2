@@ -23,7 +23,7 @@ namespace Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
-            time t = new time();
+            timeMove t = new timeMove();
             t.ShowDialog();
             reloj.Interval = Convert.ToInt32(t.GetTime());
             reloj.Start();

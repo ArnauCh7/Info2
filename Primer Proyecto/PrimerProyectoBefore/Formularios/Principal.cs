@@ -16,6 +16,8 @@ namespace Formularios
         FlightPlanList milista = new FlightPlanList();
         PictureBox[] misPics = new PictureBox[100];
         int numPics = 0;
+        int distance;
+        bool x;
         public Principal()
         {
             InitializeComponent();
@@ -44,17 +46,38 @@ namespace Formularios
 
         private void mover_Click(object sender, EventArgs e)
         {
-            
+            timeMove t = new timeMove();
+            t.ShowDialog();
+            milista.Mover(t.GetTime());
+            for (int i = 0; i < milista.GetLength(); i++)
+            {
+                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()));
+            }
         }
 
         private void auto_Click(object sender, EventArgs e)
         {
-
+            autoData t = new autoData();
+            t.ShowDialog();
+            this.distance = t.GetDist();
+            reloj.Interval = Convert.ToInt32(t.GetTiempo());
+            reloj.Start();
         }
 
         private void stop_Click(object sender, EventArgs e)
         {
-
+            if (x == true)
+            {
+                stop.Text = "RESUME";
+                reloj.Stop();
+                x = false;
+            }
+            else
+            {
+                stop.Text = "STOP";
+                reloj.Start();
+                x = true;
+            }
         }
 
         private void reset_Click(object sender, EventArgs e)
@@ -67,6 +90,23 @@ namespace Formularios
             FlightGrind grind = new FlightGrind();
             grind.GiveList(milista);
             grind.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(milista.GetFlightPlan(0).Destino() == true && milista.GetFlightPlan(1).Destino() == true)
+            {
+                Console.WriteLine("All aircrafts arrived to it's destination");
+                reloj.Stop();
+            }
+            else
+            {
+                milista.Mover(this.distance);
+                for (int i = 0; i < milista.GetLength(); i++)
+                {
+                    misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()));
+                }
+            }
         }
     }
 }

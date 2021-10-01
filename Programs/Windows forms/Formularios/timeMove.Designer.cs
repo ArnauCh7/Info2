@@ -1,7 +1,7 @@
 ﻿
 namespace Formularios
 {
-    partial class time
+    partial class timeMove
     {
         /// <summary>
         /// Required designer variable.

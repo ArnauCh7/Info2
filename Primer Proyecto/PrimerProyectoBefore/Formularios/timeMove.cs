@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Clases;
+using FlightLib;
 
 namespace Formularios
 {
-    public partial class time : Form
+    public partial class timeMove : Form
     {
         int tiempo;
-        public time()
+        public timeMove()
         {
             InitializeComponent();
         }
@@ -32,10 +32,9 @@ namespace Formularios
                 error.ShowDialog();
             }
         }
-
         public int GetTime()
         {
-            return tiempo;
+            return this.tiempo;
         }
     }
 }

@@ -58,6 +58,18 @@
     <Compile Include="FlightGrind.Designer.cs">
       <DependentUpon>FlightGrind.cs</DependentUpon>
     </Compile>
+    <Compile Include="autoData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="autoData.Designer.cs">
+      <DependentUpon>autoData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="timeMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="timeMove.Designer.cs">
+      <DependentUpon>timeMove.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewAircraft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FlightGrind.resx">
       <DependentUpon>FlightGrind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="autoData.resx">
+      <DependentUpon>autoData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="timeMove.resx">
+      <DependentUpon>timeMove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAircraft.resx">
       <DependentUpon>NewAircraft.cs</DependentUpon>

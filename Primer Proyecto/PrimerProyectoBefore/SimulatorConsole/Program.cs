@@ -51,7 +51,6 @@ namespace SimulatorConsole
                 while(i < ciclos)
                 {
                     lista.Mover(intervaloTiempo);
-                    lista.EscribeConsola();
                     if (lista.GetFlightPlan(0).Conflicto(lista.GetFlightPlan(1), distanciaSeguridad))
                         Console.WriteLine("CONFLICTO!!");
                     i++;
