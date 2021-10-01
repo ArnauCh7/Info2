@@ -24,22 +24,22 @@ namespace Formularios
             Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void GiveList(FlightPlanList fl)
+        {
+            this.lista = fl; 
+        }
+
+        private void FlightGrind_Load(object sender, EventArgs e)
         {
             viewFlights.RowCount = lista.GetLength();
             viewFlights.ColumnCount = 4;
-            for(int i=0; i<lista.GetLength(); i++)
+            for (int i = 0; i < lista.GetLength(); i++)
             {
                 viewFlights.Rows[i].Cells[0].Value = lista.GetFlightPlan(i).GetID();
                 viewFlights.Rows[i].Cells[1].Value = lista.GetFlightPlan(i).GetCurrentPosition().GetX();
                 viewFlights.Rows[i].Cells[2].Value = lista.GetFlightPlan(i).GetCurrentPosition().GetY();
                 viewFlights.Rows[i].Cells[3].Value = lista.GetFlightPlan(i).GetVelocity();
             }
-
-        }
-        public void GiveList(FlightPlanList fl)
-        {
-            this.lista = fl; 
         }
     }
 }
