@@ -18,6 +18,7 @@ namespace Formularios
         int numPics = 0;
         int distance;
         bool x;
+        int segundos;
         public Principal()
         {
             InitializeComponent();
@@ -82,7 +83,13 @@ namespace Formularios
 
         private void reset_Click(object sender, EventArgs e)
         {
-
+            milista.RemoveAll();
+            segundos = 0;
+            label5.Text = Convert.ToString(segundos);
+            for (int i = 0; i < numPics; i++)
+            {
+                panel.Controls.Remove(misPics[i]);
+            }
         }
 
         private void aircraftListToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,7 +101,19 @@ namespace Formularios
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(milista.GetFlightPlan(0).Destino() == true && milista.GetFlightPlan(1).Destino() == true)
+            segundos = Convert.ToInt32(label5.Text) + 1;
+            label5.Text = Convert.ToString(segundos);
+            int allArrived = 0;
+
+            for (int i=0; i<milista.GetLength(); i++)
+            {
+                if (milista.GetFlightPlan(i).Destino()== true)
+                {
+                    allArrived += 1;
+                }
+            }
+
+            if (allArrived == milista.GetLength())
             {
                 Console.WriteLine("All aircrafts arrived to it's destination");
                 reloj.Stop();
@@ -106,6 +125,15 @@ namespace Formularios
                 {
                     misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()));
                 }
+            }
+        }
+
+        private void restart_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i<milista.GetLength(); i++)
+            {
+                milista.GetFlightPlan(i).GoInitialPosition();
+                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()));
             }
         }
     }

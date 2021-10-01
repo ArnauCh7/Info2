@@ -44,13 +44,16 @@ namespace Formularios
             this.newAircraftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aircraftListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloj = new System.Windows.Forms.Timer(this.components);
+            this.restart = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // reset
             // 
             this.reset.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reset.Location = new System.Drawing.Point(56, 273);
+            this.reset.Location = new System.Drawing.Point(56, 330);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(97, 32);
             this.reset.TabIndex = 0;
@@ -61,7 +64,7 @@ namespace Formularios
             // stop
             // 
             this.stop.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stop.Location = new System.Drawing.Point(56, 221);
+            this.stop.Location = new System.Drawing.Point(120, 169);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(97, 32);
             this.stop.TabIndex = 1;
@@ -83,7 +86,7 @@ namespace Formularios
             // auto
             // 
             this.auto.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.auto.Location = new System.Drawing.Point(56, 167);
+            this.auto.Location = new System.Drawing.Point(184, 117);
             this.auto.Name = "auto";
             this.auto.Size = new System.Drawing.Size(97, 32);
             this.auto.TabIndex = 3;
@@ -157,7 +160,7 @@ namespace Formularios
             this.newAircraftToolStripMenuItem,
             this.aircraftListToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 34);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
             // newAircraftToolStripMenuItem
@@ -178,11 +181,45 @@ namespace Formularios
             // 
             this.reloj.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // restart
+            // 
+            this.restart.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restart.Location = new System.Drawing.Point(184, 330);
+            this.restart.Name = "restart";
+            this.restart.Size = new System.Drawing.Size(97, 32);
+            this.restart.TabIndex = 10;
+            this.restart.Text = "RESTART";
+            this.restart.UseVisualStyleBackColor = true;
+            this.restart.Click += new System.EventHandler(this.restart_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(53, 447);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 41);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(44, 428);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 19);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Time counter";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 612);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.restart);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -196,7 +233,7 @@ namespace Formularios
             this.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
-            this.Text = "Form1";
+            this.Text = "Principal";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -220,6 +257,9 @@ namespace Formularios
         private System.Windows.Forms.ToolStripMenuItem newAircraftToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aircraftListToolStripMenuItem;
         private System.Windows.Forms.Timer reloj;
+        private System.Windows.Forms.Button restart;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

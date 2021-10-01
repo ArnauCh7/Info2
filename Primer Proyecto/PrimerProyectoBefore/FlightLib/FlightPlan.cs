@@ -9,6 +9,7 @@ namespace FlightLib
         // Atributos
 
         string id; // identificador
+        Position initialPosition; // posicion inicial
         Position currentPosition; // posicion actual
         Position finalPosition; // posicion final
         double velocidad;
@@ -17,6 +18,7 @@ namespace FlightLib
         public FlightPlan(string id, double cpx, double cpy, double fpx, double fpy, double velocidad)
         {
             this.id = id;
+            this.initialPosition = new Position(cpx, cpy);
             this.currentPosition = new Position(cpx, cpy);
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
@@ -54,6 +56,7 @@ namespace FlightLib
         public bool Destino()
         {
             bool resultado = false;
+            // Si la posicion actual es igual a la final, devuelve true
             if (this.currentPosition == this.finalPosition) resultado = true;
 
             return resultado;
@@ -78,6 +81,11 @@ namespace FlightLib
         public double GetVelocity()
         {
             return this.velocidad;
+        }
+
+        public void GoInitialPosition()
+        {
+            currentPosition = initialPosition;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Formularios
     public partial class NewAircraft : Form
     {
         FlightPlan p;
+        double safetyDistance;
         public NewAircraft()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Formularios
             try
             {
                 p = new FlightPlan(id.Text, Convert.ToDouble(currentX.Text), Convert.ToDouble(currentY.Text), Convert.ToDouble(finalX.Text), Convert.ToDouble(finalY.Text), Convert.ToDouble(velocity.Text));
+                safetyDistance = Convert.ToDouble(safe.Text);
                 Close();
             }
             catch(FormatException)
@@ -35,6 +37,11 @@ namespace Formularios
         public FlightPlan GetFlight()
         {
             return this.p;
+        }
+
+        public double GetSafetyDistance()
+        {
+            return safetyDistance;
         }
     }
 }

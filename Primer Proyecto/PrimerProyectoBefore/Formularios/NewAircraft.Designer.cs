@@ -42,119 +42,153 @@ namespace Formularios
             this.velocity = new System.Windows.Forms.TextBox();
             this.finalY = new System.Windows.Forms.TextBox();
             this.confirm = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.safe = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Location = new System.Drawing.Point(9, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 17);
+            this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Aircraft ID";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 306);
+            this.label6.Location = new System.Drawing.Point(9, 249);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.Size = new System.Drawing.Size(44, 15);
             this.label6.TabIndex = 1;
             this.label6.Text = "Velicity";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(146, 217);
+            this.label5.Location = new System.Drawing.Point(110, 176);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
+            this.label5.Size = new System.Drawing.Size(44, 15);
             this.label5.TabIndex = 2;
             this.label5.Text = "Final Y";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 217);
+            this.label4.Location = new System.Drawing.Point(9, 176);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.Size = new System.Drawing.Size(45, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Final X";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 110);
+            this.label2.Location = new System.Drawing.Point(9, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Current X";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(146, 110);
+            this.label3.Location = new System.Drawing.Point(110, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 17);
+            this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Current Y";
             // 
             // id
             // 
-            this.id.Location = new System.Drawing.Point(12, 52);
+            this.id.Location = new System.Drawing.Point(9, 42);
+            this.id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(100, 22);
+            this.id.Size = new System.Drawing.Size(76, 20);
             this.id.TabIndex = 6;
             // 
             // currentX
             // 
-            this.currentX.Location = new System.Drawing.Point(12, 140);
+            this.currentX.Location = new System.Drawing.Point(9, 114);
+            this.currentX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentX.Name = "currentX";
-            this.currentX.Size = new System.Drawing.Size(100, 22);
+            this.currentX.Size = new System.Drawing.Size(76, 20);
             this.currentX.TabIndex = 7;
             // 
             // finalX
             // 
-            this.finalX.Location = new System.Drawing.Point(12, 248);
+            this.finalX.Location = new System.Drawing.Point(9, 202);
+            this.finalX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.finalX.Name = "finalX";
-            this.finalX.Size = new System.Drawing.Size(100, 22);
+            this.finalX.Size = new System.Drawing.Size(76, 20);
             this.finalX.TabIndex = 8;
             // 
             // currentY
             // 
-            this.currentY.Location = new System.Drawing.Point(149, 140);
+            this.currentY.Location = new System.Drawing.Point(112, 114);
+            this.currentY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentY.Name = "currentY";
-            this.currentY.Size = new System.Drawing.Size(100, 22);
+            this.currentY.Size = new System.Drawing.Size(76, 20);
             this.currentY.TabIndex = 9;
             // 
             // velocity
             // 
-            this.velocity.Location = new System.Drawing.Point(12, 338);
+            this.velocity.Location = new System.Drawing.Point(9, 275);
+            this.velocity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.velocity.Name = "velocity";
-            this.velocity.Size = new System.Drawing.Size(100, 22);
+            this.velocity.Size = new System.Drawing.Size(76, 20);
             this.velocity.TabIndex = 10;
             // 
             // finalY
             // 
-            this.finalY.Location = new System.Drawing.Point(149, 248);
+            this.finalY.Location = new System.Drawing.Point(112, 202);
+            this.finalY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.finalY.Name = "finalY";
-            this.finalY.Size = new System.Drawing.Size(100, 22);
+            this.finalY.Size = new System.Drawing.Size(76, 20);
             this.finalY.TabIndex = 11;
             // 
             // confirm
             // 
-            this.confirm.Location = new System.Drawing.Point(149, 386);
+            this.confirm.Location = new System.Drawing.Point(112, 314);
+            this.confirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.confirm.Name = "confirm";
-            this.confirm.Size = new System.Drawing.Size(75, 23);
+            this.confirm.Size = new System.Drawing.Size(56, 29);
             this.confirm.TabIndex = 12;
             this.confirm.Text = "Confirm";
             this.confirm.UseVisualStyleBackColor = true;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(113, 249);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Safety Distance";
+            // 
+            // safe
+            // 
+            this.safe.Location = new System.Drawing.Point(113, 275);
+            this.safe.Name = "safe";
+            this.safe.Size = new System.Drawing.Size(75, 20);
+            this.safe.TabIndex = 14;
+            // 
             // NewAircraft
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 421);
+            this.ClientSize = new System.Drawing.Size(281, 354);
+            this.Controls.Add(this.safe);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.confirm);
             this.Controls.Add(this.finalY);
             this.Controls.Add(this.velocity);
@@ -168,6 +202,7 @@ namespace Formularios
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewAircraft";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -190,5 +225,7 @@ namespace Formularios
         private System.Windows.Forms.TextBox velocity;
         private System.Windows.Forms.TextBox finalY;
         private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox safe;
     }
 }

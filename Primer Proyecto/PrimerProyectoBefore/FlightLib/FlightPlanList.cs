@@ -6,7 +6,7 @@ namespace FlightLib
 {
     public class FlightPlanList
     {
-        FlightPlan[] vector = new FlightPlan[2];
+        FlightPlan[] vector = new FlightPlan[10];
         int number = 0;
 
         public int AddFlightPlan(FlightPlan p)
@@ -58,6 +58,15 @@ namespace FlightLib
                     vector[i].Mover(tiempo);
                 }
                 i++;
+            }
+        }
+
+        public void RemoveAll()
+        {
+            while(number > 0)
+            {
+                vector[number-1] = null;
+                number--;
             }
         }
     }
