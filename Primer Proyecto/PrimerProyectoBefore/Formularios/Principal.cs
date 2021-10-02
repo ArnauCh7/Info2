@@ -19,6 +19,7 @@ namespace Formularios
         int distance;
         bool x;
         int segundos;
+        double distanciaSeguridad;
         public Principal()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace Formularios
             form.ShowDialog();
             FlightPlan p = form.GetFlight();
             milista.AddFlightPlan(p);
+            distanciaSeguridad = form.GetSafetyDistance();
             PictureBox pic = new PictureBox();
             pic.Size = new Size(5, 5);
             pic.BackColor = Color.Red;
@@ -61,8 +63,14 @@ namespace Formularios
             autoData t = new autoData();
             t.ShowDialog();
             this.distance = t.GetDist();
-            reloj.Interval = Convert.ToInt32(t.GetTiempo());
-            reloj.Start();
+            if (t.GetTiempo() == 0)
+            {
+            }
+            else
+            {
+                reloj.Interval = Convert.ToInt32(t.GetTiempo());
+                reloj.Start();
+            }
         }
 
         private void stop_Click(object sender, EventArgs e)
@@ -105,11 +113,32 @@ namespace Formularios
             label5.Text = Convert.ToString(segundos);
             int allArrived = 0;
 
+            
             for (int i=0; i<milista.GetLength(); i++)
             {
                 if (milista.GetFlightPlan(i).Destino()== true)
                 {
                     allArrived += 1;
+                }
+            }
+
+            for(int i=0; i< milista.GetLength(); i++)
+            {
+                for(int j=0; j<milista.GetLength(); j++)
+                {
+                    if (milista.GetFlightPlan(i) == milista.GetFlightPlan(j))
+                    {
+                    }
+                    else
+                    
+                        if (milista.GetFlightPlan(0).Conflicto(milista.GetFlightPlan(1), distanciaSeguridad) == true)
+                        {
+                            reloj.Stop();
+                            conflictError error = new conflictError();
+                            error.ShowDialog();
+                            
+                        }
+                    
                 }
             }
 

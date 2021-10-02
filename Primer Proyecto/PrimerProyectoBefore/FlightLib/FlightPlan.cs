@@ -64,7 +64,7 @@ namespace FlightLib
 
         public bool Conflicto(FlightPlan b, double distanciaSeguridad)
         {
-            bool conflicto = true;
+            bool conflicto = false;
             if (this.currentPosition.Distancia(b.currentPosition) < distanciaSeguridad)
                 conflicto = true;
 

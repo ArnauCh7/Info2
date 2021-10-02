@@ -64,6 +64,12 @@
     <Compile Include="autoData.Designer.cs">
       <DependentUpon>autoData.cs</DependentUpon>
     </Compile>
+    <Compile Include="conflictError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conflictError.Designer.cs">
+      <DependentUpon>conflictError.cs</DependentUpon>
+    </Compile>
     <Compile Include="timeMove.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="autoData.resx">
       <DependentUpon>autoData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conflictError.resx">
+      <DependentUpon>conflictError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="timeMove.resx">
       <DependentUpon>timeMove.cs</DependentUpon>
