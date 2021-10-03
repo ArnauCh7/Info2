@@ -87,5 +87,6 @@ namespace FlightLib
         {
             currentPosition = initialPosition;
         }
+
     }
 }

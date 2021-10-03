@@ -136,6 +136,8 @@ namespace Formularios
                             reloj.Stop();
                             conflictError error = new conflictError();
                             error.ShowDialog();
+                            milista.GetFlightPlan(0).SetVelocidad(error.GetV1());
+                            milista.GetFlightPlan(1).SetVelocidad(error.GetV2());
                             
                         }
                     
