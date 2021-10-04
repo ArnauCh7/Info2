@@ -32,14 +32,14 @@ namespace Formularios
             FlightPlan p = form.GetFlight();
             milista.AddFlightPlan(p);
             distanciaSeguridad = form.GetSafetyDistance();
-            PictureBox pic = new PictureBox();
-            pic.Size = new Size(5, 5);
-            pic.BackColor = Color.Red;
             if(p == null)
             {
             }
             else
             {
+                PictureBox pic = new PictureBox();
+                pic.Size = new Size(5, 5);
+                pic.BackColor = Color.Red;
                 pic.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX()), Convert.ToInt32(p.GetCurrentPosition().GetY()));
                 panel.Controls.Add(pic);
                 misPics[numPics] = pic;

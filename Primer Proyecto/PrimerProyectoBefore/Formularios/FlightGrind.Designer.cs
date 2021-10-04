@@ -39,17 +39,17 @@ namespace Formularios
             // 
             this.viewFlights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.viewFlights.Location = new System.Drawing.Point(16, 54);
-            this.viewFlights.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.viewFlights.Margin = new System.Windows.Forms.Padding(4);
             this.viewFlights.Name = "viewFlights";
             this.viewFlights.RowHeadersWidth = 51;
-            this.viewFlights.Size = new System.Drawing.Size(320, 185);
+            this.viewFlights.Size = new System.Drawing.Size(593, 185);
             this.viewFlights.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 11);
+            this.label1.Location = new System.Drawing.Point(257, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 36);
@@ -58,8 +58,8 @@ namespace Formularios
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(119, 273);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(263, 275);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 2;
@@ -71,11 +71,11 @@ namespace Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 316);
+            this.ClientSize = new System.Drawing.Size(633, 316);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewFlights);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FlightGrind";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FlightGrind_Load);

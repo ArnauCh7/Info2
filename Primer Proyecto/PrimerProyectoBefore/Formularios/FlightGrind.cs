@@ -33,6 +33,10 @@ namespace Formularios
         {
             viewFlights.RowCount = lista.GetLength();
             viewFlights.ColumnCount = 4;
+            viewFlights.Columns[0].HeaderText = "Identifier";
+            viewFlights.Columns[1].HeaderText = "Current X";
+            viewFlights.Columns[2].HeaderText = "Current Y";
+            viewFlights.Columns[3].HeaderText = "Velocity";
             for (int i = 0; i < lista.GetLength(); i++)
             {
                 viewFlights.Rows[i].Cells[0].Value = lista.GetFlightPlan(i).GetID();
