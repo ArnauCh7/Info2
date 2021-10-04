@@ -43,5 +43,27 @@ namespace Formularios
         {
             return safetyDistance;
         }
+
+        private void default1_Click(object sender, EventArgs e)
+        {
+            id.Text = "Default 1";
+            currentX.Text = "20";
+            currentY.Text = "30";
+            finalX.Text = "750";
+            finalY.Text = "500";
+            velocity.Text = "10";
+            safe.Text = "70";
+        }
+
+        private void default2_Click(object sender, EventArgs e)
+        {
+            id.Text = "Default 2";
+            currentX.Text = "700";
+            currentY.Text = "100";
+            finalX.Text = "30";
+            finalY.Text = "500";
+            velocity.Text = "10";
+            safe.Text = "70";
+        }
     }
 }

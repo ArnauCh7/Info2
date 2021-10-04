@@ -90,7 +90,7 @@ namespace Formularios
             this.auto.Name = "auto";
             this.auto.Size = new System.Drawing.Size(97, 32);
             this.auto.TabIndex = 3;
-            this.auto.Text = "AUTO";
+            this.auto.Text = "SIMULATE";
             this.auto.UseVisualStyleBackColor = true;
             this.auto.Click += new System.EventHandler(this.auto_Click);
             // 
@@ -160,7 +160,7 @@ namespace Formularios
             this.newAircraftToolStripMenuItem,
             this.aircraftListToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 34);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
             // newAircraftToolStripMenuItem
@@ -198,7 +198,7 @@ namespace Formularios
             this.label5.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(53, 447);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 41);
+            this.label5.Size = new System.Drawing.Size(31, 33);
             this.label5.TabIndex = 11;
             this.label5.Text = "0";
             // 

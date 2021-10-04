@@ -38,9 +38,14 @@ namespace Formularios
             else
             {
                 PictureBox pic = new PictureBox();
-                pic.Size = new Size(5, 5);
-                pic.BackColor = Color.Red;
+                pic.Width = 35;
+                pic.Height = 35;
+                pic.ClientSize = new Size(35, 35);
                 pic.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX()), Convert.ToInt32(p.GetCurrentPosition().GetY()));
+                pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                Bitmap image = new Bitmap("avion.gif");
+                pic.Image = (Image)image;
+
                 panel.Controls.Add(pic);
                 misPics[numPics] = pic;
                 numPics++;
