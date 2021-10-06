@@ -175,7 +175,7 @@ namespace Formularios
             // safe
             // 
             this.safe.Location = new System.Drawing.Point(151, 338);
-            this.safe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.safe.Margin = new System.Windows.Forms.Padding(4);
             this.safe.Name = "safe";
             this.safe.Size = new System.Drawing.Size(99, 22);
             this.safe.TabIndex = 14;
@@ -204,7 +204,7 @@ namespace Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 436);
+            this.ClientSize = new System.Drawing.Size(372, 445);
             this.Controls.Add(this.default1);
             this.Controls.Add(this.default2);
             this.Controls.Add(this.safe);

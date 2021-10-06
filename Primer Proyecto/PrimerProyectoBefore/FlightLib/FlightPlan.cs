@@ -88,5 +88,15 @@ namespace FlightLib
             currentPosition = initialPosition;
         }
 
+        public Position GetInitialPosition()
+        {
+            return this.initialPosition;
+        }
+
+        public Position GetFinalPosition()
+        {
+            return this.finalPosition;
+        }
+
     }
 }

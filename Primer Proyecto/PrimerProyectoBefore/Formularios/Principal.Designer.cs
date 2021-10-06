@@ -216,6 +216,7 @@ namespace Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1182, 612);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

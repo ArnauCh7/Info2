@@ -15,6 +15,9 @@ namespace Formularios
     {
         FlightPlanList milista = new FlightPlanList();
         PictureBox[] misPics = new PictureBox[100];
+        PictureBox[] finalPics = new PictureBox[100];
+        PictureBox[] initialPics = new PictureBox[100];
+        PictureBox[] distanceCircles = new PictureBox[100];
         int numPics = 0;
         int distance;
         bool x;
@@ -38,16 +41,39 @@ namespace Formularios
             else
             {
                 PictureBox pic = new PictureBox();
-                pic.Width = 35;
-                pic.Height = 35;
-                pic.ClientSize = new Size(35, 35);
-                pic.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX()), Convert.ToInt32(p.GetCurrentPosition().GetY()));
+                pic.Width = 40;
+                pic.Height = 40;
+                pic.ClientSize = new Size(40, 40);
+                pic.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX()-20), Convert.ToInt32(p.GetCurrentPosition().GetY()-20));
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                Bitmap image = new Bitmap("avion.gif");
-                pic.Image = (Image)image;
+                Bitmap fotoAvion = new Bitmap("avion.gif");
+                pic.Image = (Image)fotoAvion;
+
+                PictureBox pic1 = new PictureBox();
+                pic1.Width = 20;
+                pic1.Height = 20;
+                pic1.ClientSize = new Size(20, 20);
+                pic1.Location = new Point(Convert.ToInt32(p.GetInitialPosition().GetX() - 10), Convert.ToInt32(p.GetInitialPosition().GetY() - 10));
+                pic1.SizeMode = PictureBoxSizeMode.StretchImage;
+                Bitmap fotoInicio = new Bitmap("puntoInicial.png");
+                pic1.Image = (Image)fotoInicio;
+
+                PictureBox pic2 = new PictureBox();
+                pic2.Width = 20;
+                pic2.Height = 20;
+                pic2.ClientSize = new Size(20, 20);
+                pic2.Location = new Point(Convert.ToInt32(p.GetFinalPosition().GetX() - 10), Convert.ToInt32(p.GetFinalPosition().GetY() - 10));
+                pic2.SizeMode = PictureBoxSizeMode.StretchImage;
+                Bitmap fotoFinal = new Bitmap("puntoFinal.png");
+                pic2.Image = (Image)fotoFinal;
+
 
                 panel.Controls.Add(pic);
+                panel.Controls.Add(pic1);
+                panel.Controls.Add(pic2);
                 misPics[numPics] = pic;
+                initialPics[numPics] = pic1;
+                finalPics[numPics] = pic2;
                 numPics++;
             }
         }
@@ -59,7 +85,7 @@ namespace Formularios
             milista.Mover(t.GetTime());
             for (int i = 0; i < milista.GetLength(); i++)
             {
-                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()));
+                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-10), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-10));
             }
         }
 
@@ -159,7 +185,7 @@ namespace Formularios
                 milista.Mover(this.distance);
                 for (int i = 0; i < milista.GetLength(); i++)
                 {
-                    misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()));
+                    misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-10), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-10));
                 }
             }
         }
