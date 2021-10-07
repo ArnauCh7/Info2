@@ -102,6 +102,7 @@ namespace Formularios
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(801, 551);
             this.panel.TabIndex = 4;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // label1
             // 

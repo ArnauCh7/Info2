@@ -18,6 +18,7 @@ namespace Formularios
         PictureBox[] finalPics = new PictureBox[100];
         PictureBox[] initialPics = new PictureBox[100];
         PictureBox[] distanceCircles = new PictureBox[100];
+        System.Drawing.Graphics graphics;
         int numPics = 0;
         int distance;
         bool x;
@@ -67,13 +68,29 @@ namespace Formularios
                 Bitmap fotoFinal = new Bitmap("puntoFinal.png");
                 pic2.Image = (Image)fotoFinal;
 
+                PictureBox pic3 = new PictureBox();
+                pic3.Width = Convert.ToInt32(distanciaSeguridad);
+                pic3.Height = Convert.ToInt32(distanciaSeguridad);
+                pic3.ClientSize = new Size(Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
+                pic3.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(p.GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
+                pic3.SizeMode = PictureBoxSizeMode.StretchImage;
+                Bitmap fotoCirculo = new Bitmap("circuloDistancia.png");
+                pic3.Image = (Image)fotoCirculo;
+
+                Pen myPen = new Pen(Color.Red);
+                Point initialPoint = new Point(Convert.ToInt32(p.GetInitialPosition().GetX()), Convert.ToInt32(p.GetInitialPosition().GetY()));
+                Point finalPoint = new Point(Convert.ToInt32(p.GetFinalPosition().GetX()), Convert.ToInt32(p.GetFinalPosition().GetY()));
+                this.graphics.DrawLine(myPen, initialPoint, finalPoint);
+                myPen.Dispose();
 
                 panel.Controls.Add(pic);
                 panel.Controls.Add(pic1);
                 panel.Controls.Add(pic2);
+                panel.Controls.Add(pic3);
                 misPics[numPics] = pic;
                 initialPics[numPics] = pic1;
                 finalPics[numPics] = pic2;
+                distanceCircles[numPics] = pic3;
                 numPics++;
             }
         }
@@ -85,7 +102,8 @@ namespace Formularios
             milista.Mover(t.GetTime());
             for (int i = 0; i < milista.GetLength(); i++)
             {
-                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-10), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-10));
+                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
+                distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
             }
         }
 
@@ -185,7 +203,8 @@ namespace Formularios
                 milista.Mover(this.distance);
                 for (int i = 0; i < milista.GetLength(); i++)
                 {
-                    misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-10), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-10));
+                    misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
+                    distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
                 }
             }
         }
@@ -195,8 +214,16 @@ namespace Formularios
             for(int i = 0; i<milista.GetLength(); i++)
             {
                 milista.GetFlightPlan(i).GoInitialPosition();
-                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()));
+                misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
+                distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
             }
         }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics graphics = panel.CreateGraphics();
+            this.graphics = graphics;
+        }
+                
     }
 }
