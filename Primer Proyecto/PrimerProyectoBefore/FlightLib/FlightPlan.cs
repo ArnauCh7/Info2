@@ -98,10 +98,28 @@ namespace FlightLib
             return this.finalPosition;
         }
 
-        /*public double mindistance()
+        public double minDistance(FlightPlan f)
         {
+            double x1 = this.initialPosition.GetX();
+            double x2 = f.initialPosition.GetX();
+            double y1 = this.initialPosition.GetY();
+            double y2 = f.initialPosition.GetY();
 
-        }*/
+            double hipo1 = Math.Sqrt((this.finalPosition.GetX() - this.initialPosition.GetX()) * (this.finalPosition.GetX() - this.initialPosition.GetX()) + (this.finalPosition.GetY() - this.initialPosition.GetY()) * (this.finalPosition.GetY() - this.initialPosition.GetY()));
+            double cos1 = (this.finalPosition.GetX() - this.initialPosition.GetX()) / hipo1;
+            double sen1 = (this.finalPosition.GetY() - this.initialPosition.GetY()) / hipo1;
+
+            double hipo2 = Math.Sqrt((f.finalPosition.GetX() - f.initialPosition.GetX()) * (f.finalPosition.GetX() - f.initialPosition.GetX()) + (f.finalPosition.GetY() - f.initialPosition.GetY()) * (f.finalPosition.GetY() - f.initialPosition.GetY()));
+            double cos2 = (f.finalPosition.GetX() - f.initialPosition.GetX()) / hipo1;
+            double sen2 = (f.finalPosition.GetY() - f.initialPosition.GetY()) / hipo1;
+
+            double vx1 = this.velocidad * cos1;
+            double vx2 = f.velocidad * cos2;
+            double vy1 = this.velocidad * sen1;
+            double vy2 = f.velocidad * sen2;
+
+            double t =
+        }
 
     }
 }
