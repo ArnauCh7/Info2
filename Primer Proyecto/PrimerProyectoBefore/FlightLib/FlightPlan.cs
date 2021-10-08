@@ -98,5 +98,10 @@ namespace FlightLib
             return this.finalPosition;
         }
 
+        /*public double mindistance()
+        {
+
+        }*/
+
     }
 }
