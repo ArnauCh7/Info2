@@ -118,7 +118,15 @@ namespace FlightLib
             double vy1 = this.velocidad * sen1;
             double vy2 = f.velocidad * sen2;
 
-            double t =
+            double t =(x1*(vx2-vx1)+x2*(vx1-vx2)+y1*(vy2-vy1)+y2*(vy1-vy2))/((Math.Pow(vx1,2))+(Math.Pow(vx2,2))-2*vx1*vx2+(Math.Pow(vy1,2))+(Math.Pow(vy2,2))-2*vy2*vy1);
+
+            double xmin = (x1 + vx1 * t)-(x2 + vx2 * t);
+            double ymin = (y1 + vy1 * t) - (y2 + vy2 * t);
+
+            double dist = Math.Sqrt(Math.Pow(xmin, 2) + Math.Pow(ymin, 2));
+
+            return dist;
+
         }
 
     }

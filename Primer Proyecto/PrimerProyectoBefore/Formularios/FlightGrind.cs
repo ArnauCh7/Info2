@@ -31,18 +31,24 @@ namespace Formularios
 
         private void FlightGrind_Load(object sender, EventArgs e)
         {
-            viewFlights.RowCount = lista.GetLength();
-            viewFlights.ColumnCount = 4;
-            viewFlights.Columns[0].HeaderText = "Identifier";
-            viewFlights.Columns[1].HeaderText = "Current X";
-            viewFlights.Columns[2].HeaderText = "Current Y";
-            viewFlights.Columns[3].HeaderText = "Velocity";
-            for (int i = 0; i < lista.GetLength(); i++)
+            if (lista.GetLength() == 0)
             {
-                viewFlights.Rows[i].Cells[0].Value = lista.GetFlightPlan(i).GetID();
-                viewFlights.Rows[i].Cells[1].Value = lista.GetFlightPlan(i).GetCurrentPosition().GetX();
-                viewFlights.Rows[i].Cells[2].Value = lista.GetFlightPlan(i).GetCurrentPosition().GetY();
-                viewFlights.Rows[i].Cells[3].Value = lista.GetFlightPlan(i).GetVelocity();
+            }
+            else
+            {
+                viewFlights.RowCount = lista.GetLength();
+                viewFlights.ColumnCount = 4;
+                viewFlights.Columns[0].HeaderText = "Identifier";
+                viewFlights.Columns[1].HeaderText = "Current X";
+                viewFlights.Columns[2].HeaderText = "Current Y";
+                viewFlights.Columns[3].HeaderText = "Velocity";
+                for (int i = 0; i < lista.GetLength(); i++)
+                {
+                    viewFlights.Rows[i].Cells[0].Value = lista.GetFlightPlan(i).GetID();
+                    viewFlights.Rows[i].Cells[1].Value = lista.GetFlightPlan(i).GetCurrentPosition().GetX();
+                    viewFlights.Rows[i].Cells[2].Value = lista.GetFlightPlan(i).GetCurrentPosition().GetY();
+                    viewFlights.Rows[i].Cells[3].Value = lista.GetFlightPlan(i).GetVelocity();
+                }
             }
         }
     }

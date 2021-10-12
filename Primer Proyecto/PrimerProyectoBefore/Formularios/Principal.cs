@@ -19,6 +19,7 @@ namespace Formularios
         PictureBox[] initialPics = new PictureBox[100];
         PictureBox[] distanceCircles = new PictureBox[100];
         System.Drawing.Graphics graphics;
+        bool romper = false;
         int numPics = 0;
         int distance;
         bool x;
@@ -148,10 +149,16 @@ namespace Formularios
             milista.RemoveAll();
             segundos = 0;
             label5.Text = Convert.ToString(segundos);
-            for (int i = 0; i < numPics; i++)
+            for (int i = 0; i < numPics; i++)//Bucle que elimina todas las fotos de el panel
             {
                 panel.Controls.Remove(misPics[i]);
+                panel.Controls.Remove(initialPics[i]);
+                panel.Controls.Remove(finalPics[i]);
             }
+            romper = false;//Setea la variable que rompe el bucle de conflicto a false de nuevo
+            panel.Invalidate();//Limpa el panel de los dibujos que tiene
+            reloj.Stop();
+            stop.Text = "STOP";
         }
 
         private void aircraftListToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,23 +185,29 @@ namespace Formularios
 
             for(int i=0; i< milista.GetLength(); i++)
             {
-                for(int j=0; j<milista.GetLength(); j++)
+                if (romper == false)
                 {
-                    if (milista.GetFlightPlan(i) == milista.GetFlightPlan(j))
+                    for (int j = 0; j < milista.GetLength(); j++)
                     {
-                    }
-                    else
-                    
-                        if (milista.GetFlightPlan(0).Conflicto(milista.GetFlightPlan(1), distanciaSeguridad) == true)
+                        if (milista.GetFlightPlan(i) == milista.GetFlightPlan(j))
+                        {
+                        }
+                        else
+
+                            if (milista.GetFlightPlan(0).Conflicto(milista.GetFlightPlan(1), distanciaSeguridad) == true)
                         {
                             reloj.Stop();
                             conflictError error = new conflictError();
                             error.ShowDialog();
                             milista.GetFlightPlan(0).SetVelocidad(error.GetV1());
                             milista.GetFlightPlan(1).SetVelocidad(error.GetV2());
-                            
+                            romper = true;
                         }
-                    
+                    }
+                }
+                else
+                {
+                    break;
                 }
             }
 
@@ -226,6 +239,7 @@ namespace Formularios
                 Pen myPen = new Pen(Color.Black);
                 this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
                 myPen.Dispose();
+                romper = false;
                 //distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
             }
         }
