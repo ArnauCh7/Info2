@@ -68,7 +68,7 @@ namespace Formularios
                 pic2.SizeMode = PictureBoxSizeMode.StretchImage;
                 Bitmap fotoFinal = new Bitmap("puntoFinal.png");
                 pic2.Image = (Image)fotoFinal;
-                /*
+                
                 PictureBox pic3 = new PictureBox();
                 pic3.Width = Convert.ToInt32(distanciaSeguridad);
                 pic3.Height = Convert.ToInt32(distanciaSeguridad);
@@ -77,23 +77,23 @@ namespace Formularios
                 pic3.SizeMode = PictureBoxSizeMode.StretchImage;
                 Bitmap fotoCirculo = new Bitmap("circuloDistancia.png");
                 pic3.Image = (Image)fotoCirculo;
-                */
+                
 
-                Pen myPen = new Pen(Color.Black);
+                /*Pen myPen = new Pen(Color.Black);
                 Point initialPoint = new Point(Convert.ToInt32(p.GetInitialPosition().GetX()), Convert.ToInt32(p.GetInitialPosition().GetY()));
                 Point finalPoint = new Point(Convert.ToInt32(p.GetFinalPosition().GetX()), Convert.ToInt32(p.GetFinalPosition().GetY()));
                 this.graphics.DrawEllipse(myPen, Convert.ToInt32(p.GetInitialPosition().GetX()-distanciaSeguridad/2), Convert.ToInt32(p.GetInitialPosition().GetY()-distanciaSeguridad/2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
                 this.graphics.DrawLine(myPen, initialPoint, finalPoint);
-                myPen.Dispose();
+                myPen.Dispose();*/
 
                 panel.Controls.Add(pic);
                 panel.Controls.Add(pic1);
                 panel.Controls.Add(pic2);
-                //panel.Controls.Add(pic3);
+                panel.Controls.Add(pic3);
                 misPics[numPics] = pic;
                 initialPics[numPics] = pic1;
                 finalPics[numPics] = pic2;
-                //distanceCircles[numPics] = pic3;
+                distanceCircles[numPics] = pic3;
                 numPics++;
             }
         }
@@ -106,10 +106,10 @@ namespace Formularios
             for (int i = 0; i < milista.GetLength(); i++)
             {
                 misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
-                Pen myPen = new Pen(Color.Black);
+                /*Pen myPen = new Pen(Color.Black);
                 this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
-                myPen.Dispose();
-                //distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
+                myPen.Dispose();*/
+                distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
             }
         }
 
@@ -222,10 +222,10 @@ namespace Formularios
                 for (int i = 0; i < milista.GetLength(); i++)
                 {
                     misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
-                    Pen myPen = new Pen(Color.Black);
+                    /*Pen myPen = new Pen(Color.Black);
                     this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
-                    myPen.Dispose();
-                    //distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
+                    myPen.Dispose();*/
+                    distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
                 }
             }
         }
@@ -236,11 +236,11 @@ namespace Formularios
             {
                 milista.GetFlightPlan(i).GoInitialPosition();
                 misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
-                Pen myPen = new Pen(Color.Black);
+                /*Pen myPen = new Pen(Color.Black);
                 this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
-                myPen.Dispose();
+                myPen.Dispose();*/
                 romper = false;
-                //distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
+                distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
             }
         }
 
