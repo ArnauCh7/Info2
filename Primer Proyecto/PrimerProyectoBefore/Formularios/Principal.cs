@@ -19,7 +19,8 @@ namespace Formularios
         PictureBox[] initialPics = new PictureBox[100];
         PictureBox[] distanceCircles = new PictureBox[100];
         System.Drawing.Graphics graphics;
-        bool romper = false;
+        bool romper = false;//bool para que no aparezcan dos ventanas de que hay colision en la comprovación por cada tick del reloj
+        //bool parar = false; (bool para generalizar el if de distancia minima en el boton auto)
         int numPics = 0;
         int distance;
         bool x;
@@ -79,12 +80,12 @@ namespace Formularios
                 pic3.Image = (Image)fotoCirculo;
                 
 
-                /*Pen myPen = new Pen(Color.Black);
+                Pen myPen = new Pen(Color.Black);
                 Point initialPoint = new Point(Convert.ToInt32(p.GetInitialPosition().GetX()), Convert.ToInt32(p.GetInitialPosition().GetY()));
                 Point finalPoint = new Point(Convert.ToInt32(p.GetFinalPosition().GetX()), Convert.ToInt32(p.GetFinalPosition().GetY()));
-                this.graphics.DrawEllipse(myPen, Convert.ToInt32(p.GetInitialPosition().GetX()-distanciaSeguridad/2), Convert.ToInt32(p.GetInitialPosition().GetY()-distanciaSeguridad/2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
+                //this.graphics.DrawEllipse(myPen, Convert.ToInt32(p.GetInitialPosition().GetX()-distanciaSeguridad/2), Convert.ToInt32(p.GetInitialPosition().GetY()-distanciaSeguridad/2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
                 this.graphics.DrawLine(myPen, initialPoint, finalPoint);
-                myPen.Dispose();*/
+                myPen.Dispose();
 
                 panel.Controls.Add(pic);
                 panel.Controls.Add(pic1);
@@ -100,31 +101,90 @@ namespace Formularios
 
         private void mover_Click(object sender, EventArgs e)
         {
-            timeMove t = new timeMove();
-            t.ShowDialog();
-            milista.Mover(t.GetTime());
+            milista.Mover(10);
             for (int i = 0; i < milista.GetLength(); i++)
             {
                 misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
-                /*Pen myPen = new Pen(Color.Black);
-                this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
-                myPen.Dispose();*/
+                Pen myPen = new Pen(Color.Black);
+                //this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
+                Point initialPoint = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetInitialPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetInitialPosition().GetY()));
+                Point finalPoint = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetFinalPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetFinalPosition().GetY()));
+                this.graphics.DrawLine(myPen, initialPoint, finalPoint);
+                myPen.Dispose();
                 distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
             }
         }
 
         private void auto_Click(object sender, EventArgs e)
         {
-            autoData t = new autoData();
-            t.ShowDialog();
-            this.distance = t.GetDist();
-            if (t.GetTiempo() == 0)
+            if (milista.GetLength() < 2)
             {
+                autoData t = new autoData();
+                t.ShowDialog();
+                this.distance = t.GetDist();
+                if (t.GetTiempo() == 0)
+                {
+                }
+                else
+                {
+                    reloj.Interval = Convert.ToInt32(t.GetTiempo());
+                    reloj.Start();
+                }
             }
             else
             {
-                reloj.Interval = Convert.ToInt32(t.GetTiempo());
-                reloj.Start();
+                if (milista.GetFlightPlan(0).minDistance(milista.GetFlightPlan(1)) <= distanciaSeguridad)
+                {
+                    conflictAvoid av = new conflictAvoid();
+                    av.ShowDialog();
+                    if (av.GetAvoid() == true)
+                    {
+                        while (milista.GetFlightPlan(0).minDistance(milista.GetFlightPlan(1)) <= distanciaSeguridad)
+                        {
+                            milista.GetFlightPlan(0).SetVelocidad(milista.GetFlightPlan(0).GetVelocity() - 1);
+                        }
+                        autoData t = new autoData();
+                        t.ShowDialog();
+                        this.distance = t.GetDist();
+                        if (t.GetTiempo() == 0)
+                        {
+                        }
+                        else
+                        {
+                            reloj.Interval = Convert.ToInt32(t.GetTiempo());
+                            reloj.Start();
+                        }
+                    }
+                    else
+                    {
+                        autoData t = new autoData();
+                        t.ShowDialog();
+                        this.distance = t.GetDist();
+                        if (t.GetTiempo() == 0)
+                        {
+                        }
+                        else
+                        {
+                            reloj.Interval = Convert.ToInt32(t.GetTiempo());
+                            reloj.Start();
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    autoData t = new autoData();
+                    t.ShowDialog();
+                    this.distance = t.GetDist();
+                    if (t.GetTiempo() == 0)
+                    {
+                    }
+                    else
+                    {
+                        reloj.Interval = Convert.ToInt32(t.GetTiempo());
+                        reloj.Start();
+                    }
+                }
             }
         }
 
@@ -154,6 +214,7 @@ namespace Formularios
                 panel.Controls.Remove(misPics[i]);
                 panel.Controls.Remove(initialPics[i]);
                 panel.Controls.Remove(finalPics[i]);
+                panel.Controls.Remove(distanceCircles[i]);
             }
             romper = false;//Setea la variable que rompe el bucle de conflicto a false de nuevo
             panel.Invalidate();//Limpa el panel de los dibujos que tiene
@@ -193,15 +254,16 @@ namespace Formularios
                         {
                         }
                         else
-
-                            if (milista.GetFlightPlan(0).Conflicto(milista.GetFlightPlan(1), distanciaSeguridad) == true)
                         {
-                            reloj.Stop();
-                            conflictError error = new conflictError();
-                            error.ShowDialog();
-                            milista.GetFlightPlan(0).SetVelocidad(error.GetV1());
-                            milista.GetFlightPlan(1).SetVelocidad(error.GetV2());
-                            romper = true;
+                            if (milista.GetFlightPlan(i).Conflicto(milista.GetFlightPlan(j), distanciaSeguridad) == true)
+                            {
+                                reloj.Stop();
+                                conflictError error = new conflictError();
+                                error.ShowDialog();
+                                milista.GetFlightPlan(0).SetVelocidad(error.GetV1());
+                                milista.GetFlightPlan(1).SetVelocidad(error.GetV2());
+                                romper = true;
+                            }
                         }
                     }
                 }
@@ -222,9 +284,12 @@ namespace Formularios
                 for (int i = 0; i < milista.GetLength(); i++)
                 {
                     misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
-                    /*Pen myPen = new Pen(Color.Black);
-                    this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
-                    myPen.Dispose();*/
+                    Pen myPen = new Pen(Color.Black);
+                    //this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
+                    Point initialPoint = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetInitialPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetInitialPosition().GetY()));
+                    Point finalPoint = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetFinalPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetFinalPosition().GetY()));
+                    this.graphics.DrawLine(myPen, initialPoint, finalPoint);
+                    myPen.Dispose();
                     distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
                 }
             }
@@ -236,11 +301,16 @@ namespace Formularios
             {
                 milista.GetFlightPlan(i).GoInitialPosition();
                 misPics[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX()-20), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY()-20));
-                /*Pen myPen = new Pen(Color.Black);
-                this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
-                myPen.Dispose();*/
+                Pen myPen = new Pen(Color.Black);
+                //this.graphics.DrawEllipse(myPen, Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - distanciaSeguridad / 2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - distanciaSeguridad / 2), Convert.ToInt32(distanciaSeguridad), Convert.ToInt32(distanciaSeguridad));
+                Point initialPoint = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetInitialPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetInitialPosition().GetY()));
+                Point finalPoint = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetFinalPosition().GetX()), Convert.ToInt32(milista.GetFlightPlan(i).GetFinalPosition().GetY()));
+                this.graphics.DrawLine(myPen, initialPoint, finalPoint);
+                myPen.Dispose();
                 romper = false;
                 distanceCircles[i].Location = new Point(Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetX() - Convert.ToInt32(distanciaSeguridad)/2), Convert.ToInt32(milista.GetFlightPlan(i).GetCurrentPosition().GetY() - Convert.ToInt32(distanciaSeguridad)/2));
+                reloj.Stop();
+                stop.Text = "STOP";
             }
         }
 

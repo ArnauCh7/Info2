@@ -17,3 +17,4 @@ C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\F
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.autoData.resources
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.timeMove.resources
 C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.conflictError.resources
+C:\Users\arnau\Documents\INFO\C#\Projects\Primer Proyecto\PrimerProyectoBefore\Formularios\obj\Debug\Formularios.conflictAvoid.resources

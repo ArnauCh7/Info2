@@ -70,6 +70,12 @@
     <Compile Include="conflictError.Designer.cs">
       <DependentUpon>conflictError.cs</DependentUpon>
     </Compile>
+    <Compile Include="conflictAvoid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conflictAvoid.Designer.cs">
+      <DependentUpon>conflictAvoid.cs</DependentUpon>
+    </Compile>
     <Compile Include="timeMove.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="conflictError.resx">
       <DependentUpon>conflictError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conflictAvoid.resx">
+      <DependentUpon>conflictAvoid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="timeMove.resx">
       <DependentUpon>timeMove.cs</DependentUpon>

@@ -100,6 +100,7 @@ namespace FlightLib
 
         public double minDistance(FlightPlan f)
         {
+
             double x1 = this.initialPosition.GetX();
             double x2 = f.initialPosition.GetX();
             double y1 = this.initialPosition.GetY();
@@ -118,7 +119,7 @@ namespace FlightLib
             double vy1 = this.velocidad * sen1;
             double vy2 = f.velocidad * sen2;
 
-            double t =(x1*(vx2-vx1)+x2*(vx1-vx2)+y1*(vy2-vy1)+y2*(vy1-vy2))/((Math.Pow(vx1,2))+(Math.Pow(vx2,2))-2*vx1*vx2+(Math.Pow(vy1,2))+(Math.Pow(vy2,2))-2*vy2*vy1);
+            double t = (x1 * (vx2 - vx1) + x2 * (vx1 - vx2) + y1 * (vy2 - vy1) + y2 * (vy1 - vy2)) / ((Math.Pow(vx1, 2)) + (Math.Pow(vx2, 2)) - 2 * vx1 * vx2 + (Math.Pow(vy1, 2)) + (Math.Pow(vy2, 2)) - 2 * vy2 * vy1);
 
             double x1min = (x1 + vx1 * t);
             double y1min = (y1 + vy1 * t);
