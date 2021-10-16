@@ -20,12 +20,11 @@ namespace Formularios
         PictureBox[] distanceCircles = new PictureBox[100];
         System.Drawing.Graphics graphics;
         bool romper = false;//bool para que no aparezcan dos ventanas de que hay colision en la comprovación por cada tick del reloj
-        //bool parar = false; (bool para generalizar el if de distancia minima en el boton auto)
-        int numPics = 0;
+        int numPics = 0;//numero de imagenes en las listas (son todas iguales porque es una por avion)
         int distance;
-        bool x;
-        int segundos;
-        double distanciaSeguridad;
+        bool x;//bool para saber en que posicion esta el boton stop/resume
+        int segundos;//texto que sale en el contador de tiempo
+        double distanciaSeguridad;//
         public Principal()
         {
             InitializeComponent();
