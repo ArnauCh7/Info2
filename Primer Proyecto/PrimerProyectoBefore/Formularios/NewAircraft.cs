@@ -24,9 +24,18 @@ namespace Formularios
         {
             try
             {
-                p = new FlightPlan(id.Text, Convert.ToDouble(currentX.Text), Convert.ToDouble(currentY.Text), Convert.ToDouble(finalX.Text), Convert.ToDouble(finalY.Text), Convert.ToDouble(velocity.Text));
-                safetyDistance = Convert.ToDouble(safe.Text);
-                Close();
+                if (Convert.ToDouble(currentX.Text) <= 800 || Convert.ToDouble(currentX.Text) <= 800)
+                {
+                    p = new FlightPlan(id.Text, Convert.ToDouble(currentX.Text), Convert.ToDouble(currentY.Text), Convert.ToDouble(finalX.Text), Convert.ToDouble(finalY.Text), Convert.ToDouble(velocity.Text));
+                    safetyDistance = Convert.ToDouble(safe.Text);
+                    Close();
+                }
+                else
+                {
+                    ErrorFormato error = new ErrorFormato();
+                    error.ShowDialog();
+                }
+                
             }
             catch(FormatException)
             {

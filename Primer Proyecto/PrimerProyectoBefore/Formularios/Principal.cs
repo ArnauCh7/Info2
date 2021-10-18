@@ -14,17 +14,17 @@ namespace Formularios
     public partial class Principal : Form
     {
         FlightPlanList milista = new FlightPlanList();
-        PictureBox[] misPics = new PictureBox[100];
-        PictureBox[] finalPics = new PictureBox[100];
-        PictureBox[] initialPics = new PictureBox[100];
-        PictureBox[] distanceCircles = new PictureBox[100];
+        PictureBox[] misPics = new PictureBox[10];
+        PictureBox[] finalPics = new PictureBox[10];
+        PictureBox[] initialPics = new PictureBox[10];
+        PictureBox[] distanceCircles = new PictureBox[10];
         System.Drawing.Graphics graphics;
         bool romper = false;//bool para que no aparezcan dos ventanas de que hay colision en la comprovación por cada tick del reloj
         int numPics = 0;//numero de imagenes en las listas (son todas iguales porque es una por avion)
         int distance;
         bool x;//bool para saber en que posicion esta el boton stop/resume
         int segundos;//texto que sale en el contador de tiempo
-        double distanciaSeguridad;//
+        double distanciaSeguridad;//variable donde se guarda la distancia de seguridad
         public Principal()
         {
             InitializeComponent();
@@ -48,6 +48,8 @@ namespace Formularios
                 pic.ClientSize = new Size(40, 40);
                 pic.Location = new Point(Convert.ToInt32(p.GetCurrentPosition().GetX()-20), Convert.ToInt32(p.GetCurrentPosition().GetY()-20));
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                pic.Tag = p;
+                pic.Click += new System.EventHandler(this.evento);
                 Bitmap fotoAvion = new Bitmap("avion.gif");
                 pic.Image = (Image)fotoAvion;
 
@@ -96,6 +98,17 @@ namespace Formularios
                 distanceCircles[numPics] = pic3;
                 numPics++;
             }
+        }
+        private void evento(object sender, EventArgs e)
+        {
+            PictureBox pic = (PictureBox)sender;
+            FlightPlan info = (FlightPlan)pic.Tag;
+            MessageBox.Show(info.GetID() + ": " +
+                " Current X: " + Convert.ToString(info.GetCurrentPosition().GetX()) +
+                " Current Y: " + Convert.ToString(info.GetCurrentPosition().GetY()) +
+                " Final X: " + Convert.ToString(info.GetFinalPosition().GetX()) +
+                " Final Y: " + Convert.ToString(info.GetFinalPosition().GetY()) +
+                " Velocity: " + info.GetVelocity());
         }
 
         private void mover_Click(object sender, EventArgs e)

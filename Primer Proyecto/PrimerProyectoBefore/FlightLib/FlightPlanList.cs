@@ -6,7 +6,7 @@ namespace FlightLib
 {
     public class FlightPlanList
     {
-        FlightPlan[] vector = new FlightPlan[100];
+        FlightPlan[] vector = new FlightPlan[10];
         int number = 0;
 
         public int AddFlightPlan(FlightPlan p)
@@ -69,5 +69,22 @@ namespace FlightLib
                 number--;
             }
         }
+
+        /*public int GetIndex(string id)
+        {
+            for(int i = 0; i < number; i++)
+            {
+                if(vector[i].GetID() == id)
+                {
+                    return i;
+                }
+                else
+                {
+                    return -1;
+                }
+                
+            }
+
+        }*/
     }
 }
