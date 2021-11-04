@@ -324,6 +324,8 @@ namespace Formularios
                 reloj.Stop();
                 stop.Text = "STOP";
             }
+            segundos = 0;
+            label5.Text = Convert.ToString(segundos);
         }
 
         private void panel_Paint(object sender, PaintEventArgs e)
